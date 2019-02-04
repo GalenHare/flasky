@@ -3,7 +3,11 @@ from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 
-@app.route("/")
+
+@app.route('/')
+def home():
+ return 'My home page' 
+ 
 @app.route("/<some_name>")
 def hello(some_name='person'):
     return "Hello {0}".format(some_name)
